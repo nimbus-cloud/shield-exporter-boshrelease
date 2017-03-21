@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eux
+
+# Copy common utils
+mkdir -p ${BOSH_INSTALL_TARGET}/common
+cp -a ${BOSH_COMPILE_TARGET}/common/* ${BOSH_INSTALL_TARGET}/common
+
+# Extract shield_exporter package
+mkdir -p ${BOSH_INSTALL_TARGET}/bin
+cd ${BOSH_COMPILE_TARGET}/shield_exporter
+tar xzvf shield_exporter.tar.gz
+cp -a ./* ${BOSH_INSTALL_TARGET}/bin

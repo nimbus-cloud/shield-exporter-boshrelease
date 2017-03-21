@@ -1,0 +1,6 @@
+---
+name: shield_exporter
+
+files:
+- common/utils.sh
+- shield_exporter/shield_exporter.tar.gz

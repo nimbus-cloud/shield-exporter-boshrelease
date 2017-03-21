@@ -1,0 +1,23 @@
+---
+name: shield_exporter
+
+packages:
+  - shield_exporter
+
+templates:
+  bin/shield_exporter_ctl: bin/shield_exporter_ctl
+
+properties:
+  shield_exporter.web.listen:
+    description: "Address on which to expose metrics and web interface."
+    default: "9119"
+  shield_exporter.namespace:
+    description: "Namespace for the Shield failed backup metrics."
+    default: "shield"
+  shield_exporter.backend:
+    description: "Shield url to connect to."
+  shield_exporter.user:
+    description: "User to connect to Shield instance."
+    default: "shield"
+  shield_exporter.pass:
+    description: "Password to connect to Shield instance."
